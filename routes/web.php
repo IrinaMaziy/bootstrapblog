@@ -11,15 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index', ['articles' => \App\Models\Article::all()]);
-})->name('index');
-Route::get('/about', function () {
-	return view('about');
-})->name('about');
-Route::get('/services', function () {
-	return view('services', ['services' => \App\Models\Service::all()]);
-})->name('services');
-Route::get('/contacts', function () {
-	return view('contacts', ['contacts' => \App\Models\Contact::all()]);
-})->name('contacts');
+Route::get('/', 'ArticleController')->name('index');
+Route::get('/about', 'AboutController')->name('about');
+Route::get('/services', 'ServiceController')->name('services');
+Route::get('/contacts', 'ContactsController')->name('contacts');
