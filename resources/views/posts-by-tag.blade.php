@@ -10,13 +10,13 @@
         @foreach($category->article as $article)
             <img class="card-img-top" src="{{$article->img}} " alt="Card image cap">
             <div class="card-body">
-                <h2 class="card-title"><a href="#">{{$article->headline}} </a></h2>
+                <h2 class="card-title"><a href="{{route('postsById', $article->id)}}">{{$article->headline}} </a></h2>
                 <p class="card-text">{{$article->content}}</p>
-                <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                <a href="{{route('postsById', $article->id)}}" class="btn btn-primary">Read More &rarr;</a>
             </div>
             <div class="card-footer text-muted">
                 Posted on {{$article->created_at}} by
-                <a href="#">{{$article->user->name}}</a>
+                <a href="{{route('postsByUser', $article->user->id)}}">{{$article->user->name}}</a>
 
             </div>
         @endforeach

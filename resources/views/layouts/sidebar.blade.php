@@ -21,7 +21,7 @@
                         <li>
                             @inject('categories', '\App\Services\GetAllCategoriesService')
                                 @foreach($categories->GetAllCategories() as $category)
-                                    <a href="#">{{$category->title}}</a><br>
+                                    <a href="{{route('postsByTag', $category->key)}}">{{$category->title}}</a><br>
                                 @endforeach
                         </li>
                     </ul>

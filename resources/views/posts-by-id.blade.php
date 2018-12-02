@@ -3,13 +3,13 @@
 @section('title', $posts->headline)
 
 @section('content')
-    {{--<h1 class="my-4">  заголовок  </h1>--}}
+    <h1 class="my-4">{{$posts->headline}}</h1>
 
     <!-- Blog Post -->
     <div class="card mb-4">
             <img class="card-img-top" src="{{$posts->img}} " alt="Card image cap">
             <div class="card-body">
-                <h2 class="card-title"><a href="#">{{$posts->headline}} </a></h2>
+                {{--<h2 class="card-title"><a href="#">{{$posts->headline}} </a></h2>--}}
                 <p class="card-text">{{$posts->content}}</p>
                 {{--<a href="#" class="btn btn-primary">Read More &rarr;</a>--}}
             </div>

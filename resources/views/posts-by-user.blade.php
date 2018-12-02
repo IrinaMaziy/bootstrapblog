@@ -11,9 +11,9 @@
         @foreach($posts as $post)
             <img class="card-img-top" src="{{$post->img}} " alt="Card image cap">
             <div class="card-body">
-                <h2 class="card-title"><a href="#">{{$post->headline}} </a></h2>
+                <h2 class="card-title"><a href="{{route('postsById', $post->id)}}">{{$post->headline}} </a></h2>
                 <p class="card-text">{{$post->content}}</p>
-                <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                <a href="{{route('postsById', $post->id)}}" class="btn btn-primary">Read More &rarr;</a>
             </div>
             <div class="card-footer text-muted">
                 Posted on {{$post->created_at}} by

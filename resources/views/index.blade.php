@@ -14,7 +14,7 @@
         <div class="card-body">
           <h2 class="card-title"><a href="{{route('postsById', $article->id)}}">{{$article->headline}} </a></h2>
           <p class="card-text">{{$article->content}}</p>
-          <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          <a href="{{route('postsById', $article->id)}}" class="btn btn-primary">Read More &rarr;</a>
         </div>
         <div class="card-footer text-muted">
           Posted on {{$article->created_at}} by
