@@ -24,12 +24,12 @@ $factory->define(App\Models\Service::class, function (Faker $faker) {
 });
 $factory->define(App\Models\User::class, function (Faker $faker) {
 	return [
-		'name' => $faker->name,
-		'password' => $faker->password
+		'name' => $faker->name
 	];
 });
 $factory->define(App\Models\Category::class, function (Faker $faker) {
 	return [
-		'title' => $faker->colorName
+		'title' => $faker->colorName,
+		'key' => $faker->slug
 	];
 });

@@ -6,10 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    public function posts()
+	public function posts()
 	{
-		return $this->hasMany(Article::class);
+		return $this->hasMany(Article::class, 'user_id');
 	}
-
-
 }

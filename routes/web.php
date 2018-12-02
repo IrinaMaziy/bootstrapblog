@@ -15,3 +15,8 @@ Route::get('/', 'ArticleController')->name('index');
 Route::get('/about', 'AboutController')->name('about');
 Route::get('/services', 'ServiceController')->name('services');
 Route::get('/contacts', 'ContactsController')->name('contacts');
+
+Route::get('/category/{key}', 'PostByTagController')->name('postsByTag');
+
+
+Route::get('/user/{id}', 'PostByUserController')->name('postsByUser');

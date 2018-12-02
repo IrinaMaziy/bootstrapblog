@@ -18,7 +18,12 @@
         </div>
         <div class="card-footer text-muted">
           Posted on {{$article->created_at}} by
-          <a href="#">{{$article->user->name}}</a>
+          <a href="{{route('postsByUser', $article->user->id)}}">{{$article->user->name}}</a>
+          <span>Category: </span>
+            @foreach($article->category as $category)
+            <a href="{{route('postsByTag', $category->key)}}"> #{{$category->title}} </a>
+
+              @endforeach
         </div>
 		  @endforeach
   </div>
