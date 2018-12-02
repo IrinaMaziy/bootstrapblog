@@ -3,8 +3,7 @@
 @section('title', 'Home Page')
 
 @section('content')
-    <h1 class="my-4">Блог разработчика
-        <small>:: Новости</small>
+    <h1 class="my-4">Статьи :: {{$articles->user->name}}
     </h1>
 
     <!-- Blog Post -->

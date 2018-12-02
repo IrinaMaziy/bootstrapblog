@@ -20,3 +20,4 @@ Route::get('/category/{key}', 'PostByTagController')->name('postsByTag');
 
 
 Route::get('/user/{id}', 'PostByUserController')->name('postsByUser');
+Route::get('/post/{id}', 'PostByIdController')->name('postsById');
